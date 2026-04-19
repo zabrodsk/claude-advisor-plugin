@@ -1,5 +1,8 @@
 {
   "name": "claude-advisor-plugin",
+  "metadata": {
+    "description": "The Advisor Strategy for Claude Code — Opus reasons and reviews while Sonnet subagents execute."
+  },
   "owner": {
     "name": "Dusan Zabrodsky",
     "email": "dusanek@gmail.com"
@@ -9,8 +12,8 @@
       "name": "advisor",
       "description": "Activate Advisor Strategy — Opus reasons and reviews while Sonnet subagents handle all implementation work.",
       "source": {
-        "source": "github",
-        "repo": "zabrodsk/claude-advisor-plugin"
+        "source": "url",
+        "url": "https://github.com/zabrodsk/claude-advisor-plugin.git"
       }
     }
   ]
