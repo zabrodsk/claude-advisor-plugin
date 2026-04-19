@@ -2,17 +2,16 @@
   "name": "claude-advisor-plugin",
   "owner": {
     "name": "Dusan Zabrodsky",
-    "github": "zabrodsk",
     "email": "dusanek@gmail.com"
   },
   "plugins": [
     {
       "name": "advisor",
-      "version": "1.0.0",
       "description": "Activate Advisor Strategy — Opus reasons and reviews while Sonnet subagents handle all implementation work.",
-      "source": "./.",
-      "license": "MIT",
-      "keywords": ["advisor", "opus", "sonnet", "orchestration", "strategy", "subagent"]
+      "source": {
+        "source": "github",
+        "repo": "zabrodsk/claude-advisor-plugin"
+      }
     }
   ]
 }
