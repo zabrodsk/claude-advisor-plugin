@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="900" height="460" role="img" aria-label="Cost comparison: All Opus vs Advisor strategy">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="opusBarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8875a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b85e3a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="advisorOpusGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d97757;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c06040;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="advisorSonnetGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c8aa8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5a6a8a;stop-opacity:1" />
+    </linearGradient>
+    <filter id="barGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="460" fill="url(#bgGrad2)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="48" text-anchor="middle" font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="700" fill="#e8ddd5">Token cost, typical session</text>
+  <text x="450" y="70" text-anchor="middle" font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#8a9bb5">approximate — directional comparison, not a benchmark</text>
+
+  <!-- Baseline / floor -->
+  <line x1="120" y1="360" x2="780" y2="360" stroke="#ffffff" stroke-width="0.8" opacity="0.12"/>
+
+  <!-- Y-axis ticks -->
+  <g font-family="'SF Mono', 'Fira Code', monospace" font-size="11" fill="#8a9bb5" opacity="0.6">
+    <text x="112" y="364" text-anchor="end">0</text>
+    <line x1="118" y1="360" x2="122" y2="360" stroke="#8a9bb5" stroke-width="0.8" opacity="0.5"/>
+    <text x="112" y="274" text-anchor="end">25%</text>
+    <line x1="118" y1="270" x2="122" y2="270" stroke="#8a9bb5" stroke-width="0.8" opacity="0.3"/>
+    <line x1="122" y1="270" x2="780" y2="270" stroke="#8a9bb5" stroke-width="0.5" opacity="0.1" stroke-dasharray="4 6"/>
+    <text x="112" y="184" text-anchor="end">50%</text>
+    <line x1="118" y1="180" x2="122" y2="180" stroke="#8a9bb5" stroke-width="0.8" opacity="0.3"/>
+    <line x1="122" y1="180" x2="780" y2="180" stroke="#8a9bb5" stroke-width="0.5" opacity="0.1" stroke-dasharray="4 6"/>
+    <text x="112" y="94" text-anchor="end">100%</text>
+    <line x1="118" y1="90" x2="122" y2="90" stroke="#8a9bb5" stroke-width="0.8" opacity="0.3"/>
+    <line x1="122" y1="90" x2="780" y2="90" stroke="#8a9bb5" stroke-width="0.5" opacity="0.08" stroke-dasharray="4 6"/>
+  </g>
+
+  <!-- ── LEFT BAR: ALL OPUS ── -->
+  <!-- Bar: full height = 270px (from y=90 to y=360) -->
+  <rect x="220" y="360" width="140" height="0" rx="4" fill="url(#opusBarGrad)" filter="url(#barGlow)" opacity="0.92">
+    <animate attributeName="height" from="0" to="270" dur="1.0s" fill="freeze" begin="0.2s" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+    <animate attributeName="y" from="360" to="90" dur="1.0s" fill="freeze" begin="0.2s" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+  </rect>
+
+  <!-- Top shine -->
+  <rect x="220" y="90" width="140" height="18" rx="4" fill="#ffffff" opacity="0.07">
+    <animate attributeName="opacity" from="0" to="0.07" dur="0.8s" fill="freeze" begin="1.1s"/>
+  </rect>
+
+  <!-- Label above bar: 100% -->
+  <text x="290" y="78" text-anchor="middle" font-family="'SF Mono', 'Fira Code', monospace" font-size="22" font-weight="700" fill="#e8875a" opacity="0">
+    100%
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" fill="freeze" begin="1.1s"/>
+  </text>
+
+  <!-- Bar label below -->
+  <text x="290" y="384" text-anchor="middle" font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#e8ddd5">All Opus</text>
+  <text x="290" y="402" text-anchor="middle" font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#8a9bb5">every token at Opus price</text>
+
+  <!-- ── RIGHT BAR: ADVISOR ── -->
+  <!-- Total bar height ~30% of 270 = ~81px -->
+  <!-- Sonnet segment: ~15% = 40.5px (bottom, y=319 to y=360) -->
+  <!-- Opus segment: ~15% = 40.5px (top, y=278 to y=319) -->
+
+  <!-- Sonnet (execution) segment -->
+  <rect x="540" y="360" width="140" height="0" rx="4" fill="url(#advisorSonnetGrad)" opacity="0.9">
+    <animate attributeName="height" from="0" to="41" dur="0.7s" fill="freeze" begin="0.5s" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+    <animate attributeName="y" from="360" to="319" dur="0.7s" fill="freeze" begin="0.5s" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+  </rect>
+
+  <!-- Opus (reasoning) segment -->
+  <rect x="540" y="319" width="140" height="0" rx="4" fill="url(#advisorOpusGrad)" opacity="0.92">
+    <animate attributeName="height" from="0" to="41" dur="0.7s" fill="freeze" begin="0.8s" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+    <animate attributeName="y" from="319" to="278" dur="0.7s" fill="freeze" begin="0.8s" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+  </rect>
+
+  <!-- Top shine on advisor bar -->
+  <rect x="540" y="278" width="140" height="14" rx="4" fill="#ffffff" opacity="0.07">
+    <animate attributeName="opacity" from="0" to="0.07" dur="0.4s" fill="freeze" begin="1.4s"/>
+  </rect>
+
+  <!-- Segment labels inside bar -->
+  <text x="610" y="307" text-anchor="middle" font-family="'SF Mono', 'Fira Code', monospace" font-size="10" fill="#ffffff" opacity="0">
+    Opus
+    <animate attributeName="opacity" from="0" to="0.7" dur="0.4s" fill="freeze" begin="1.4s"/>
+  </text>
+  <text x="610" y="346" text-anchor="middle" font-family="'SF Mono', 'Fira Code', monospace" font-size="10" fill="#ffffff" opacity="0">
+    Sonnet
+    <animate attributeName="opacity" from="0" to="0.7" dur="0.4s" fill="freeze" begin="1.4s"/>
+  </text>
+
+  <!-- Label above bar: ~30% -->
+  <text x="610" y="262" text-anchor="middle" font-family="'SF Mono', 'Fira Code', monospace" font-size="22" font-weight="700" fill="#2ea44f" opacity="0">
+    ~30%
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" fill="freeze" begin="1.4s"/>
+  </text>
+
+  <!-- Bar label below -->
+  <text x="610" y="384" text-anchor="middle" font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#e8ddd5">Advisor</text>
+  <text x="610" y="402" text-anchor="middle" font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#8a9bb5">Opus reasoning + Sonnet execution</text>
+
+  <!-- ── DIVIDING LINE between segments ── -->
+  <line x1="540" y1="319" x2="680" y2="319" stroke="#1a1a2e" stroke-width="1.5" opacity="0.6">
+    <animate attributeName="opacity" from="0" to="0.6" dur="0.3s" fill="freeze" begin="1.2s"/>
+  </line>
+
+  <!-- ── SAVINGS CALLOUT ── -->
+  <rect x="290" y="420" width="320" height="26" rx="6" fill="#2ea44f" opacity="0.18" stroke="#2ea44f" stroke-width="0.8"/>
+  <text x="450" y="437" text-anchor="middle" font-family="'SF Pro Display', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#2ea44f">roughly 3× cheaper for the same decisions</text>
+
+  <!-- Legend -->
+  <g transform="translate(140, 100)" opacity="0.8">
+    <rect x="0" y="0" width="10" height="10" rx="2" fill="#d97757"/>
+    <text x="16" y="10" font-family="'SF Pro Display', sans-serif" font-size="11" fill="#8a9bb5">Opus tokens</text>
+    <rect x="0" y="18" width="10" height="10" rx="2" fill="#7c8aa8"/>
+    <text x="16" y="28" font-family="'SF Pro Display', sans-serif" font-size="11" fill="#8a9bb5">Sonnet tokens</text>
+  </g>
+
+</svg>
