@@ -10,7 +10,7 @@
       "name": "advisor",
       "version": "1.0.0",
       "description": "Activate Advisor Strategy — Opus reasons and reviews while Sonnet subagents handle all implementation work.",
-      "source": "zabrodsk/claude-advisor-plugin",
+      "source": "./.",
       "license": "MIT",
       "keywords": ["advisor", "opus", "sonnet", "orchestration", "strategy", "subagent"]
     }

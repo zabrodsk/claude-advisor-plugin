@@ -30,7 +30,7 @@ Claude Opus is the smartest model Anthropic ships. It's also the most expensive.
 ## Install
 
 ```
-/plugin marketplace add zabrodsk/claude-advisor-plugin
+/plugin marketplace add https://github.com/zabrodsk/claude-advisor-plugin.git
 /plugin install advisor@claude-advisor-plugin
 ```
 
