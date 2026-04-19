@@ -1,6 +1,6 @@
 {
   "name": "advisor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Activate Advisor Strategy — Opus reasons and reviews while Sonnet subagents handle all implementation work.",
   "author": {
     "name": "Dusan Zabrodsky",

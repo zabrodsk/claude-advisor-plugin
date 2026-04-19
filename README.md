@@ -29,10 +29,21 @@ Claude Opus is the smartest model Anthropic ships. It's also the most expensive.
 
 ## Install
 
+Inside Claude Code, run these **two commands separately** — send the first, wait for it to succeed, then send the second:
+
+**1. Add the marketplace:**
+
 ```
 /plugin marketplace add https://github.com/zabrodsk/claude-advisor-plugin.git
+```
+
+**2. Install the plugin:**
+
+```
 /plugin install advisor@claude-advisor-plugin
 ```
+
+> Pasting both lines in one prompt will concatenate the second command onto the clone URL and fail. Send each line on its own.
 
 ## Usage
 
