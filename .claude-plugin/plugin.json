@@ -1,0 +1,19 @@
+{
+  "name": "advisor",
+  "version": "1.0.0",
+  "description": "Activate Advisor Strategy — Opus reasons and reviews while Sonnet subagents handle all implementation work.",
+  "author": {
+    "name": "Dusan Zabrodsky",
+    "email": "dusanek@gmail.com",
+    "url": "https://github.com/zabrodsk"
+  },
+  "homepage": "https://github.com/zabrodsk/claude-advisor-plugin",
+  "license": "MIT",
+  "keywords": ["advisor", "opus", "sonnet", "orchestration", "strategy", "subagent"],
+  "skills": [
+    {
+      "name": "advisor",
+      "path": "skills/advisor/SKILL.md"
+    }
+  ]
+}
