@@ -9,11 +9,5 @@
   },
   "homepage": "https://github.com/zabrodsk/claude-advisor-plugin",
   "license": "MIT",
-  "keywords": ["advisor", "opus", "sonnet", "orchestration", "strategy", "subagent"],
-  "skills": [
-    {
-      "name": "advisor",
-      "path": "skills/advisor/SKILL.md"
-    }
-  ]
+  "keywords": ["advisor", "opus", "sonnet", "orchestration", "strategy", "subagent"]
 }
